@@ -486,15 +486,15 @@ LOAD c:/progra~1/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/1
  .debug_line    0x00000a30      0x4e2 objdir-CWNANO/stm32f0_hal_nano.o
  .debug_line    0x00000f12     0x11eb objdir-CWNANO/stm32f0_hal_lowlevel.o
 
-.debug_str      0x00000000      0xde0
- .debug_str     0x00000000      0x2a3 objdir-CWNANO/simpleserial-glitch.o
-                                0x2fd (size before relaxing)
- .debug_str     0x000002a3      0x11f objdir-CWNANO/simpleserial.o
-                                0x376 (size before relaxing)
- .debug_str     0x000003c2      0x6ef objdir-CWNANO/stm32f0_hal_nano.o
-                                0x95c (size before relaxing)
- .debug_str     0x00000ab1      0x32f objdir-CWNANO/stm32f0_hal_lowlevel.o
-                                0xc1c (size before relaxing)
+.debug_str      0x00000000      0xdc0
+ .debug_str     0x00000000      0x283 objdir-CWNANO/simpleserial-glitch.o
+                                0x2dd (size before relaxing)
+ .debug_str     0x00000283      0x11f objdir-CWNANO/simpleserial.o
+                                0x356 (size before relaxing)
+ .debug_str     0x000003a2      0x6ef objdir-CWNANO/stm32f0_hal_nano.o
+                                0x93c (size before relaxing)
+ .debug_str     0x00000a91      0x32f objdir-CWNANO/stm32f0_hal_lowlevel.o
+                                0xbfc (size before relaxing)
 
 .comment        0x00000000       0x4d
  .comment       0x00000000       0x4d objdir-CWNANO/simpleserial-glitch.o

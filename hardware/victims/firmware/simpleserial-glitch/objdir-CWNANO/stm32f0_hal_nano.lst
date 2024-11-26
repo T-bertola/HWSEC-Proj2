@@ -980,30 +980,30 @@
  735              		.file 10 ".././hal/stm32f0/stm32f0xx_hal_uart.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0_hal_nano.c
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:16     .text.platform_init:00000000 $t
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:24     .text.platform_init:00000000 platform_init
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:143    .text.init_uart:00000000 $t
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:150    .text.init_uart:00000000 init_uart
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:293    .text.init_uart:00000074 $d
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:300    .text.trigger_setup:00000000 $t
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:307    .text.trigger_setup:00000000 trigger_setup
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:451    .text.trigger_setup:0000007c $d
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:456    .text.trigger_high:00000000 $t
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:463    .text.trigger_high:00000000 trigger_high
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:492    .text.trigger_low:00000000 $t
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:499    .text.trigger_low:00000000 trigger_low
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:528    .text.getch:00000000 $t
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:535    .text.getch:00000000 getch
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:587    .text.getch:00000028 $d
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:593    .text.putch:00000000 $t
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:600    .text.putch:00000000 putch
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:636    .text.putch:00000014 $d
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:642    .text.led_error:00000000 $t
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:649    .text.led_error:00000000 led_error
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:680    .text.led_ok:00000000 $t
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:687    .text.led_ok:00000000 led_ok
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:723    .bss:00000000 UartHandle
-C:\Users\tcb2196\AppData\Local\Temp\cczux4lz.s:719    .bss:00000000 $d
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:16     .text.platform_init:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:24     .text.platform_init:00000000 platform_init
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:143    .text.init_uart:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:150    .text.init_uart:00000000 init_uart
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:293    .text.init_uart:00000074 $d
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:300    .text.trigger_setup:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:307    .text.trigger_setup:00000000 trigger_setup
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:451    .text.trigger_setup:0000007c $d
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:456    .text.trigger_high:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:463    .text.trigger_high:00000000 trigger_high
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:492    .text.trigger_low:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:499    .text.trigger_low:00000000 trigger_low
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:528    .text.getch:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:535    .text.getch:00000000 getch
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:587    .text.getch:00000028 $d
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:593    .text.putch:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:600    .text.putch:00000000 putch
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:636    .text.putch:00000014 $d
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:642    .text.led_error:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:649    .text.led_error:00000000 led_error
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:680    .text.led_ok:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:687    .text.led_ok:00000000 led_ok
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:723    .bss:00000000 UartHandle
+C:\Users\jam9558\AppData\Local\Temp\ccpBGKGx.s:719    .bss:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_Init

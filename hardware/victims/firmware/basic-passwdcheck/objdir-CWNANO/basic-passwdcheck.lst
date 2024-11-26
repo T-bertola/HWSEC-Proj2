@@ -696,21 +696,21 @@
  476              		.file 6 "<built-in>"
 DEFINED SYMBOLS
                             *ABS*:00000000 basic-passwdcheck.c
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:16     .text.delay_2_ms:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:23     .text.delay_2_ms:00000000 delay_2_ms
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:70     .text.delay_2_ms:0000001c $d
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:76     .text.my_puts:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:83     .text.my_puts:00000000 my_puts
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:122    .text.my_read:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:129    .text.my_read:00000000 my_read
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:241    .text.startup.main:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:248    .text.startup.main:00000000 main
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:432    .text.startup.main:000000a8 $d
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:456    .bss:00000000 pt
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:460    .bss:00000010 asciibuf
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:464    .bss:00000050 tmp
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:468    .bss:00000090 memory
-C:\Users\mjzeec\AppData\Local\Temp\ccKrK4BD.s:457    .bss:00000000 $d
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:16     .text.delay_2_ms:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:23     .text.delay_2_ms:00000000 delay_2_ms
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:70     .text.delay_2_ms:0000001c $d
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:76     .text.my_puts:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:83     .text.my_puts:00000000 my_puts
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:122    .text.my_read:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:129    .text.my_read:00000000 my_read
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:241    .text.startup.main:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:248    .text.startup.main:00000000 main
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:432    .text.startup.main:000000a8 $d
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:456    .bss:00000000 pt
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:460    .bss:00000010 asciibuf
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:464    .bss:00000050 tmp
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:468    .bss:00000090 memory
+C:\Users\jam9558\AppData\Local\Temp\cc8c5TkC.s:457    .bss:00000000 $d
 
 UNDEFINED SYMBOLS
 putch

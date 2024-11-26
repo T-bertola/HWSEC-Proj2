@@ -980,30 +980,30 @@
  735              		.file 10 ".././hal/stm32f0/stm32f0xx_hal_uart.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0_hal_nano.c
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:16     .text.platform_init:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:24     .text.platform_init:00000000 platform_init
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:143    .text.init_uart:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:150    .text.init_uart:00000000 init_uart
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:293    .text.init_uart:00000074 $d
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:300    .text.trigger_setup:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:307    .text.trigger_setup:00000000 trigger_setup
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:451    .text.trigger_setup:0000007c $d
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:456    .text.trigger_high:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:463    .text.trigger_high:00000000 trigger_high
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:492    .text.trigger_low:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:499    .text.trigger_low:00000000 trigger_low
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:528    .text.getch:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:535    .text.getch:00000000 getch
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:587    .text.getch:00000028 $d
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:593    .text.putch:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:600    .text.putch:00000000 putch
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:636    .text.putch:00000014 $d
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:642    .text.led_error:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:649    .text.led_error:00000000 led_error
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:680    .text.led_ok:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:687    .text.led_ok:00000000 led_ok
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:723    .bss:00000000 UartHandle
-C:\Users\mjzeec\AppData\Local\Temp\ccF0sTJD.s:719    .bss:00000000 $d
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:16     .text.platform_init:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:24     .text.platform_init:00000000 platform_init
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:143    .text.init_uart:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:150    .text.init_uart:00000000 init_uart
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:293    .text.init_uart:00000074 $d
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:300    .text.trigger_setup:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:307    .text.trigger_setup:00000000 trigger_setup
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:451    .text.trigger_setup:0000007c $d
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:456    .text.trigger_high:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:463    .text.trigger_high:00000000 trigger_high
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:492    .text.trigger_low:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:499    .text.trigger_low:00000000 trigger_low
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:528    .text.getch:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:535    .text.getch:00000000 getch
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:587    .text.getch:00000028 $d
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:593    .text.putch:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:600    .text.putch:00000000 putch
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:636    .text.putch:00000014 $d
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:642    .text.led_error:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:649    .text.led_error:00000000 led_error
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:680    .text.led_ok:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:687    .text.led_ok:00000000 led_ok
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:723    .bss:00000000 UartHandle
+C:\Users\jam9558\AppData\Local\Temp\ccBy57pa.s:719    .bss:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_Init

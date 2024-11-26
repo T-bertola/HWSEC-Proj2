@@ -1642,36 +1642,36 @@
  993              		.file 4 ".././hal/stm32f0/stm32f0_hal.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 simpleserial.c
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:16     .text.check_version:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:24     .text.check_version:00000000 check_version
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:44     .text.ss_crc:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:51     .text.ss_crc:00000000 ss_crc
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:128    .text.hex_decode:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:135    .text.hex_decode:00000000 hex_decode
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:316    .text.simpleserial_addcmd_flags:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:323    .text.simpleserial_addcmd_flags:00000000 simpleserial_addcmd_flags
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:385    .text.simpleserial_addcmd_flags:00000028 $d
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:987    .bss:00000004 commands
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:391    .text.simpleserial_addcmd:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:398    .text.simpleserial_addcmd:00000000 simpleserial_addcmd
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:425    .text.simpleserial_init:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:432    .text.simpleserial_init:00000000 simpleserial_init
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:471    .text.simpleserial_init:00000024 $d
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:635    .text.ss_get_commands:00000000 ss_get_commands
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:580    .text.ss_num_commands:00000000 ss_num_commands
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:478    .text.simpleserial_put:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:485    .text.simpleserial_put:00000000 simpleserial_put
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:567    .text.simpleserial_put:00000034 $d
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:573    .text.ss_num_commands:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:623    .text.ss_num_commands:00000018 $d
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:628    .text.ss_get_commands:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:737    .text.ss_get_commands:00000048 $d
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:744    .text.simpleserial_get:00000000 $t
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:751    .text.simpleserial_get:00000000 simpleserial_get
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:965    .text.simpleserial_get:000000c4 $d
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:976    .rodata:00000000 hex_lookup
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:979    .bss:00000000 $d
-C:\Users\mjzeec\AppData\Local\Temp\cc57QgCj.s:983    .bss:00000000 num_commands
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:16     .text.check_version:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:24     .text.check_version:00000000 check_version
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:44     .text.ss_crc:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:51     .text.ss_crc:00000000 ss_crc
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:128    .text.hex_decode:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:135    .text.hex_decode:00000000 hex_decode
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:316    .text.simpleserial_addcmd_flags:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:323    .text.simpleserial_addcmd_flags:00000000 simpleserial_addcmd_flags
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:385    .text.simpleserial_addcmd_flags:00000028 $d
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:987    .bss:00000004 commands
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:391    .text.simpleserial_addcmd:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:398    .text.simpleserial_addcmd:00000000 simpleserial_addcmd
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:425    .text.simpleserial_init:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:432    .text.simpleserial_init:00000000 simpleserial_init
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:471    .text.simpleserial_init:00000024 $d
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:635    .text.ss_get_commands:00000000 ss_get_commands
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:580    .text.ss_num_commands:00000000 ss_num_commands
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:478    .text.simpleserial_put:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:485    .text.simpleserial_put:00000000 simpleserial_put
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:567    .text.simpleserial_put:00000034 $d
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:573    .text.ss_num_commands:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:623    .text.ss_num_commands:00000018 $d
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:628    .text.ss_get_commands:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:737    .text.ss_get_commands:00000048 $d
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:744    .text.simpleserial_get:00000000 $t
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:751    .text.simpleserial_get:00000000 simpleserial_get
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:965    .text.simpleserial_get:000000c4 $d
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:976    .rodata:00000000 hex_lookup
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:979    .bss:00000000 $d
+C:\Users\jam9558\AppData\Local\Temp\ccKpCGkL.s:983    .bss:00000000 num_commands
 
 UNDEFINED SYMBOLS
 putch

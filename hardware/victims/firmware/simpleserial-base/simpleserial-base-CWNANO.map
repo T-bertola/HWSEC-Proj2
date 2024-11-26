@@ -469,15 +469,15 @@ LOAD c:/progra~1/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/1
  .debug_line    0x000007d7      0x4e2 objdir-CWNANO/stm32f0_hal_nano.o
  .debug_line    0x00000cb9     0x11eb objdir-CWNANO/stm32f0_hal_lowlevel.o
 
-.debug_str      0x00000000      0xd5d
- .debug_str     0x00000000      0x243 objdir-CWNANO/simpleserial-base.o
-                                0x284 (size before relaxing)
- .debug_str     0x00000243       0xe6 objdir-CWNANO/simpleserial.o
-                                0x319 (size before relaxing)
- .debug_str     0x00000329      0x705 objdir-CWNANO/stm32f0_hal_nano.o
-                                0x95e (size before relaxing)
- .debug_str     0x00000a2e      0x32f objdir-CWNANO/stm32f0_hal_lowlevel.o
-                                0xc1e (size before relaxing)
+.debug_str      0x00000000      0xd36
+ .debug_str     0x00000000      0x21c objdir-CWNANO/simpleserial-base.o
+                                0x25d (size before relaxing)
+ .debug_str     0x0000021c       0xe6 objdir-CWNANO/simpleserial.o
+                                0x2f2 (size before relaxing)
+ .debug_str     0x00000302      0x705 objdir-CWNANO/stm32f0_hal_nano.o
+                                0x937 (size before relaxing)
+ .debug_str     0x00000a07      0x32f objdir-CWNANO/stm32f0_hal_lowlevel.o
+                                0xbf7 (size before relaxing)
 
 .comment        0x00000000       0x4d
  .comment       0x00000000       0x4d objdir-CWNANO/simpleserial-base.o
@@ -497,8 +497,8 @@ LOAD c:/progra~1/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/1
 .stab           0x00000000      0x144
  .stab          0x00000000      0x144 objdir-CWNANO/stm32f0_startup.o
 
-.stabstr        0x00000000       0x52
- .stabstr       0x00000000       0x52 objdir-CWNANO/stm32f0_startup.o
+.stabstr        0x00000000       0x53
+ .stabstr       0x00000000       0x53 objdir-CWNANO/stm32f0_startup.o
 
 Cross Reference Table
 

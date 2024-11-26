@@ -561,19 +561,19 @@ LOAD c:/progra~1/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/1
  .debug_line    0x00002169      0x8ea objdir-CWNANO/aes.o
  .debug_line    0x00002a53      0x197 objdir-CWNANO/aes-independant.o
 
-.debug_str      0x00000000      0xfbc
- .debug_str     0x00000000      0x381 objdir-CWNANO/simpleserial-aes.o
-                                0x3d2 (size before relaxing)
- .debug_str     0x00000381       0xce objdir-CWNANO/simpleserial.o
-                                0x381 (size before relaxing)
- .debug_str     0x0000044f      0x6fa objdir-CWNANO/stm32f0_hal_nano.o
-                                0x967 (size before relaxing)
- .debug_str     0x00000b49      0x32f objdir-CWNANO/stm32f0_hal_lowlevel.o
-                                0xc27 (size before relaxing)
- .debug_str     0x00000e78      0x11f objdir-CWNANO/aes.o
-                                0x362 (size before relaxing)
- .debug_str     0x00000f97       0x25 objdir-CWNANO/aes-independant.o
-                                0x293 (size before relaxing)
+.debug_str      0x00000000      0xf86
+ .debug_str     0x00000000      0x34b objdir-CWNANO/simpleserial-aes.o
+                                0x39c (size before relaxing)
+ .debug_str     0x0000034b       0xce objdir-CWNANO/simpleserial.o
+                                0x34b (size before relaxing)
+ .debug_str     0x00000419      0x6fa objdir-CWNANO/stm32f0_hal_nano.o
+                                0x931 (size before relaxing)
+ .debug_str     0x00000b13      0x32f objdir-CWNANO/stm32f0_hal_lowlevel.o
+                                0xbf1 (size before relaxing)
+ .debug_str     0x00000e42      0x11f objdir-CWNANO/aes.o
+                                0x32c (size before relaxing)
+ .debug_str     0x00000f61       0x25 objdir-CWNANO/aes-independant.o
+                                0x25d (size before relaxing)
 
 .comment        0x00000000       0x4d
  .comment       0x00000000       0x4d objdir-CWNANO/simpleserial-aes.o
@@ -598,8 +598,8 @@ LOAD c:/progra~1/chipwh~1/cw/home/portable/armgcc/bin/../lib/gcc/arm-none-eabi/1
 .stab           0x00000000      0x144
  .stab          0x00000000      0x144 objdir-CWNANO/stm32f0_startup.o
 
-.stabstr        0x00000000       0x52
- .stabstr       0x00000000       0x52 objdir-CWNANO/stm32f0_startup.o
+.stabstr        0x00000000       0x53
+ .stabstr       0x00000000       0x53 objdir-CWNANO/stm32f0_startup.o
 
 Cross Reference Table
 
