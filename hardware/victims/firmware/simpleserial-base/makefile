@@ -34,7 +34,7 @@ TARGET = simpleserial-base
 
 # List C source files here.
 # Header files (.h) are automatically pulled in.
-SRC += simpleserial-base.c
+SRC += simpleserial-base.c AES_128.c 
 
 # -----------------------------------------------------------------------------
 

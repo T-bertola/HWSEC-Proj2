@@ -18,15 +18,84 @@
 
 #include "hal.h"
 #include <stdint.h>
-#include <stdlib.h>
-
 #include "simpleserial.h"
+#include "AES_128.h"
+#include <time.h>
 
+unsigned char StateArray [4][4];
+unsigned char ExpandedKey[11][4][4];
+unsigned char ST_Matrix [4][4];
+unsigned char Mask_Matrix[4][4];
+unsigned char S_Matrix[4][4];
+
+unsigned char key_entered = 0;
+// unsigned char Key[4][4]        = {  {0x2b, 0x28, 0xab, 0x09},
+// 		{0x7e, 0xae, 0xf7, 0xcf},
+// 		{0x15, 0xd2, 0x15, 0x4f},
+// 		{0x16, 0xa6, 0x88, 0x3c} };
+unsigned char Key[4][4]= {  {0x00, 0x00, 0x00, 0x00},
+		{0x00, 0x00, 0x00, 0x00},
+		{0x00, 0x00, 0x00, 0x00},
+		{0x00, 0x00, 0x00, 0x00} };
+
+unsigned char PlainText[4][4]  = {  {0x00, 0x00, 0x00, 0x00},
+		{0x00, 0x00, 0x00, 0x00},
+		{0x00, 0x00, 0x00, 0x00},
+		{0x00, 0x00, 0x00, 0x00} };
+
+void AESRound(unsigned int StateArray[4],unsigned int Key [4] );
+
+void encrypt();
 uint8_t get_key(uint8_t* k, uint8_t len)
 {
-	// Load key here
+	memcpy(Key, k, 16);
 	return 0x00;
 }
+
+void encrypt(){
+	//generate 16 random values for the mask
+	srand(time(NULL));
+	for (int i = 0; i < 4; i ++){
+		for(int j = 0; j<4; j++){
+			Mask_Matrix[i][j] = rand() % 256;
+		}
+	}
+
+	AddMatrices(Mask_Matrix, PlainText, ST_Matrix);
+
+	ExpandKey(Key, ExpandedKey);
+	memcpy(StateArray, PlainText, 4 * 4 * sizeof(unsigned char));
+
+	AddRoundKey(ExpandedKey[0], StateArray);
+
+	AddRoundKey(ExpandedKey[0], ST_Matrix);
+	int i;
+	for(i=1; i<=10; i++){
+
+		//Unmask input
+		AddMatrices(ST_Matrix, Mask_Matrix, S_Matrix);
+		//Apply Sbox
+		SubBytes(S_Matrix);
+		SubBytes(StateArray);
+		//Remask Output
+		AddMatrices(S_Matrix, Mask_Matrix, ST_Matrix);
+
+		ShiftRows(StateArray);
+		ShiftRows(ST_Matrix);
+		ShiftRows(Mask_Matrix);
+
+		if(i!=10){
+			MixColumns(StateArray);
+			MixColumns(ST_Matrix);
+			MixColumns(Mask_Matrix);
+		}
+
+		AddRoundKey(ExpandedKey[i], StateArray);
+		AddRoundKey(ExpandedKey[i], ST_Matrix);
+	}
+	//Do unmasking stuff
+	AddMatrices(ST_Matrix, Mask_Matrix, StateArray);
+}	
 
 uint8_t get_pt(uint8_t* pt, uint8_t len)
 {
@@ -34,17 +103,31 @@ uint8_t get_pt(uint8_t* pt, uint8_t len)
 	* Start user-specific code here. */
 	trigger_high();
 
-	//16 hex bytes held in 'pt' were sent
-	//from the computer. Store your response
-	//back into 'pt', which will send 16 bytes
-	//back to computer. Can ignore of course if
-	//not needed
+	if ( key_entered == 1 ){
+
+	memcpy(PlainText, pt, 16);
+
+	encrypt();
+
+	pt = (uint8_t*)StateArray;
 
 	trigger_low();
-	/* End user-specific code here. *
-	********************************/
+
 	simpleserial_put('r', 16, pt);
+
 	return 0x00;
+
+	}
+	else{
+		memcpy(Key, pt, 16);
+		key_entered = 1;
+
+		trigger_low();
+
+		simpleserial_put('r', 16, pt);
+		return 0x00;
+	}
+
 }
 
 uint8_t reset(uint8_t* x, uint8_t len)
@@ -93,16 +176,6 @@ int main(void)
 	init_uart();
 	trigger_setup();
 
- 	/* Uncomment this to get a HELLO message for debug */
-	/*
-	putch('h');
-	putch('e');
-	putch('l');
-	putch('l');
-	putch('o');
-	putch('\n');
-	*/
-
 	simpleserial_init();
 #if SS_VER != SS_VER_2_1
 	simpleserial_addcmd('p', 16, get_pt);
@@ -110,8 +183,19 @@ int main(void)
 	simpleserial_addcmd('x', 0, reset);
 #else
     simpleserial_addcmd(0x01, 16, aes);
-
 #endif
 	while(1)
 		simpleserial_get();
+}
+
+uint32_t Cat(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3){
+	uint32_t word = 0;
+	word += b0;
+	word = (word << 8);
+	word += b1;
+	word = (word << 8);
+	word += b2;
+	word = (word << 8);
+	word += b3;
+	return word;
 }

@@ -36,7 +36,7 @@ endif
 include $(FIRMWAREPATH)/simpleserial/Makefile.simpleserial
 include $(FIRMWAREPATH)/hal/Makefile.hal
 
-include $(FIRMWAREPATH)/crypto/Makefile.crypto
+#include $(FIRMWAREPATH)/crypto/Makefile.crypto
 
 #Debug - can be useful to see variables
 #${info '$(.VARIABLES)'}
@@ -129,7 +129,7 @@ CPPDEFS += -DF_CPU=$(F_CPU)UL
 #    -adhlns...: create assembler listing
 CFLAGS += -g$(DEBUG)
 CFLAGS += $(CDEFS)
-CFLAGS += -O$(OPT)
+CFLAGS += -O3
 CFLAGS += -funsigned-char
 CFLAGS += -funsigned-bitfields
 # Note: -fpack-struct is dangerous! This is only included in XMEGA/AVR HAL
@@ -210,11 +210,11 @@ endif
 
 #---------------- Library Options ----------------
 # Minimalistic printf version
-PRINTF_LIB_MIN = -Wl,-u,vfprintf -lprintf_min
-
+#PRINTF_LIB_MIN = #-Wl,-u,vfprintf -lprintf_min
+PRINTF_LIB_MIN =
 # Floating point printf version (requires MATH_LIB = -lm below)
-PRINTF_LIB_FLOAT = -Wl,-u,vfprintf -lprintf_flt
-
+#PRINTF_LIB_FLOAT = #-Wl,-u,vfprintf -lprintf_flt
+PRINTF_LIB_FLOAT =
 # If this is left blank, then it will use the Standard printf version.
 PRINTF_LIB =
 #PRINTF_LIB = $(PRINTF_LIB_MIN)
@@ -222,10 +222,10 @@ PRINTF_LIB =
 
 
 # Minimalistic scanf version
-SCANF_LIB_MIN = -Wl,-u,vfscanf -lscanf_min
+#SCANF_LIB_MIN = -Wl,-u,vfscanf -lscanf_min
 
 # Floating point + %[ scanf version (requires MATH_LIB = -lm below)
-SCANF_LIB_FLOAT = -Wl,-u,vfscanf -lscanf_flt
+#SCANF_LIB_FLOAT = -Wl,-u,vfscanf -lscanf_flt
 
 # If this is left blank, then it will use the Standard scanf version.
 SCANF_LIB =
@@ -254,7 +254,7 @@ EXTRALIBDIRS =
 # only used for heap (malloc()).
 #EXTMEMOPTS = -Wl,--section-start,.data=0x801100,--defsym=__heap_end=0x80ffff
 
-EXTMEMOPTS =
+EXTMEMOPTS = 
 
 
 

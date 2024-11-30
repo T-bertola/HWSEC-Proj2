@@ -783,27 +783,27 @@
  563              		.file 8 "<built-in>"
 DEFINED SYMBOLS
                             *ABS*:00000000 simpleserial-aes.c
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:16     .text.get_mask:00000000 $t
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:24     .text.get_mask:00000000 get_mask
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:51     .text.get_key:00000000 $t
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:58     .text.get_key:00000000 get_key
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:84     .text.get_pt:00000000 $t
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:91     .text.get_pt:00000000 get_pt
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:142    .text.aes:00000000 $t
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:149    .text.aes:00000000 aes
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:311    .text.reset:00000000 $t
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:318    .text.reset:00000000 reset
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:337    .text.enc_multi_getpt:00000000 $t
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:344    .text.enc_multi_getpt:00000000 enc_multi_getpt
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:424    .text.enc_multi_getpt:00000038 $d
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:430    .text.enc_multi_setnum:00000000 $t
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:437    .text.enc_multi_setnum:00000000 enc_multi_setnum
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:469    .text.enc_multi_setnum:00000014 $d
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:477    .text.startup.main:00000000 $t
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:484    .text.startup.main:00000000 main
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:543    .text.startup.main:00000038 $d
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:549    .data:00000000 $d
-C:\Users\jam9558\AppData\Local\Temp\ccG8fV0M.s:553    .data:00000000 num_encryption_rounds
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:16     .text.get_mask:00000000 $t
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:24     .text.get_mask:00000000 get_mask
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:51     .text.get_key:00000000 $t
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:58     .text.get_key:00000000 get_key
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:84     .text.get_pt:00000000 $t
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:91     .text.get_pt:00000000 get_pt
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:142    .text.aes:00000000 $t
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:149    .text.aes:00000000 aes
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:311    .text.reset:00000000 $t
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:318    .text.reset:00000000 reset
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:337    .text.enc_multi_getpt:00000000 $t
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:344    .text.enc_multi_getpt:00000000 enc_multi_getpt
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:424    .text.enc_multi_getpt:00000038 $d
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:430    .text.enc_multi_setnum:00000000 $t
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:437    .text.enc_multi_setnum:00000000 enc_multi_setnum
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:469    .text.enc_multi_setnum:00000014 $d
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:477    .text.startup.main:00000000 $t
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:484    .text.startup.main:00000000 main
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:543    .text.startup.main:00000038 $d
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:549    .data:00000000 $d
+C:\Users\mjzeec\AppData\Local\Temp\ccCUoGQk.s:553    .data:00000000 num_encryption_rounds
 
 UNDEFINED SYMBOLS
 aes_indep_mask
