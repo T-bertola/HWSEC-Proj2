@@ -29,31 +29,31 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  12 .comment      00000026  00000000  00000000  00006088  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00017ec0  00000000  00000000  000060ae  2**0
+ 13 .debug_info   00017ebf  00000000  00000000  000060ae  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 00005d83  00000000  00000000  0001df6e  2**0
+ 14 .debug_abbrev 00005d90  00000000  00000000  0001df6d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_loc    00004b0a  00000000  00000000  00023cf1  2**0
+ 15 .debug_loc    00004b0a  00000000  00000000  00023cfd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_aranges 00000898  00000000  00000000  00028800  2**3
+ 16 .debug_aranges 00000898  00000000  00000000  00028808  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_ranges 00000868  00000000  00000000  00029098  2**0
+ 17 .debug_ranges 00000868  00000000  00000000  000290a0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0000b6bc  00000000  00000000  00029900  2**0
+ 18 .debug_line   0000b6bc  00000000  00000000  00029908  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00002cd2  00000000  00000000  00034fbc  2**0
+ 19 .debug_str    00002ce3  00000000  00000000  00034fc4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  00001200  00000000  00000000  00037c90  2**2
+ 20 .debug_frame  00001200  00000000  00000000  00037ca8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .stab         00000144  00000000  00000000  00038e90  2**2
+ 21 .stab         00000144  00000000  00000000  00038ea8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 22 .stabstr      00000034  00000000  00000000  00038fd4  2**0
+ 22 .stabstr      00000034  00000000  00000000  00038fec  2**0
                   CONTENTS, READONLY, DEBUGGING
- 23 .debug_line_str 00000097  00000000  00000000  00039008  2**0
+ 23 .debug_line_str 00000097  00000000  00000000  00039020  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 24 .debug_loclists 000039ed  00000000  00000000  0003909f  2**0
+ 24 .debug_loclists 000039ed  00000000  00000000  000390b7  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 25 .debug_rnglists 00000271  00000000  00000000  0003ca8c  2**0
+ 25 .debug_rnglists 00000271  00000000  00000000  0003caa4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -4557,7 +4557,7 @@ int main(void)
 /**********************************************************************
  * Functions for key expansion
  *********************************************************************/
-void ExpandKey (unsigned char Key[][4], unsigned char ExpandedKey[][4][4])
+void ExpandKey (unsigned char Key[][4], unsigned char Expanded_key[][4][4])
 {
  8002448:	b5f0      	push	{r4, r5, r6, r7, lr}
  800244a:	46de      	mov	lr, fp
@@ -4566,16 +4566,16 @@ void ExpandKey (unsigned char Key[][4], unsigned char ExpandedKey[][4][4])
  8002450:	4645      	mov	r5, r8
  8002452:	000c      	movs	r4, r1
  8002454:	b5e0      	push	{r5, r6, r7, lr}
-	unsigned char TempKeyCol[4];
-	bzero(TempKeyCol, 4*sizeof (unsigned char));
+	unsigned char Tmp_key_column[4];
+	bzero(Tmp_key_column, 4*sizeof (unsigned char));
 	int i,j;
 
 	// Encryption Key copied to Expanded Key [0]
-	memcpy(ExpandedKey[0], Key, 4 * 4 * sizeof(unsigned char));
+	memcpy(Expanded_key[0], Key, 4 * 4 * sizeof(unsigned char));
  8002456:	0001      	movs	r1, r0
 {
  8002458:	b08b      	sub	sp, #44	@ 0x2c
-	memcpy(ExpandedKey[0], Key, 4 * 4 * sizeof(unsigned char));
+	memcpy(Expanded_key[0], Key, 4 * 4 * sizeof(unsigned char));
  800245a:	2210      	movs	r2, #16
  800245c:	0020      	movs	r0, r4
  800245e:	f7fe f8d3 	bl	8000608 <memcpy>
@@ -4619,11 +4619,11 @@ void ExpandKey (unsigned char Key[][4], unsigned char ExpandedKey[][4][4])
  80024a8:	464b      	mov	r3, r9
  80024aa:	9309      	str	r3, [sp, #36]	@ 0x24
 		// Rcon applied
-		TempKeyCol[0]^=RCon[i-1];
+		Tmp_key_column[0]^=RCon[i-1];
 
 		// XOR
 		for(j=0; j<4; j++){
-			TempKeyCol[0] = TempKeyCol[0]^ExpandedKey[i-1][0][j];
+			Tmp_key_column[0] = Tmp_key_column[0]^Expanded_key[i-1][0][j];
  80024ac:	4663      	mov	r3, ip
  80024ae:	9a08      	ldr	r2, [sp, #32]
  80024b0:	5c1b      	ldrb	r3, [r3, r0]
@@ -4634,134 +4634,134 @@ void ExpandKey (unsigned char Key[][4], unsigned char ExpandedKey[][4][4])
  80024ba:	464a      	mov	r2, r9
  80024bc:	4053      	eors	r3, r2
  80024be:	469b      	mov	fp, r3
-			TempKeyCol[1] = TempKeyCol[1]^ExpandedKey[i-1][1][j];
+			Tmp_key_column[1] = Tmp_key_column[1]^Expanded_key[i-1][1][j];
  80024c0:	4663      	mov	r3, ip
  80024c2:	5d5b      	ldrb	r3, [r3, r5]
  80024c4:	4699      	mov	r9, r3
  80024c6:	464a      	mov	r2, r9
  80024c8:	9b01      	ldr	r3, [sp, #4]
  80024ca:	4053      	eors	r3, r2
-			TempKeyCol[2] = TempKeyCol[2]^ExpandedKey[i-1][2][j];
+			Tmp_key_column[2] = Tmp_key_column[2]^Expanded_key[i-1][2][j];
  80024cc:	4662      	mov	r2, ip
-			TempKeyCol[1] = TempKeyCol[1]^ExpandedKey[i-1][1][j];
+			Tmp_key_column[1] = Tmp_key_column[1]^Expanded_key[i-1][1][j];
  80024ce:	9301      	str	r3, [sp, #4]
-			TempKeyCol[2] = TempKeyCol[2]^ExpandedKey[i-1][2][j];
+			Tmp_key_column[2] = Tmp_key_column[2]^Expanded_key[i-1][2][j];
  80024d0:	5d92      	ldrb	r2, [r2, r6]
  80024d2:	9b02      	ldr	r3, [sp, #8]
  80024d4:	4053      	eors	r3, r2
-			TempKeyCol[3] = TempKeyCol[3]^ExpandedKey[i-1][3][j];
+			Tmp_key_column[3] = Tmp_key_column[3]^Expanded_key[i-1][3][j];
  80024d6:	4662      	mov	r2, ip
-			TempKeyCol[2] = TempKeyCol[2]^ExpandedKey[i-1][2][j];
+			Tmp_key_column[2] = Tmp_key_column[2]^Expanded_key[i-1][2][j];
  80024d8:	9302      	str	r3, [sp, #8]
-			TempKeyCol[3] = TempKeyCol[3]^ExpandedKey[i-1][3][j];
+			Tmp_key_column[3] = Tmp_key_column[3]^Expanded_key[i-1][3][j];
  80024da:	5dd2      	ldrb	r2, [r2, r7]
  80024dc:	9b03      	ldr	r3, [sp, #12]
  80024de:	4053      	eors	r3, r2
 
-			ExpandedKey[i][0][j] = TempKeyCol[0];
+			Expanded_key[i][0][j] = Tmp_key_column[0];
  80024e0:	465a      	mov	r2, fp
-			TempKeyCol[3] = TempKeyCol[3]^ExpandedKey[i-1][3][j];
+			Tmp_key_column[3] = Tmp_key_column[3]^Expanded_key[i-1][3][j];
  80024e2:	9303      	str	r3, [sp, #12]
-			ExpandedKey[i][1][j] = TempKeyCol[1];
+			Expanded_key[i][1][j] = Tmp_key_column[1];
  80024e4:	9b01      	ldr	r3, [sp, #4]
-			ExpandedKey[i][0][j] = TempKeyCol[0];
+			Expanded_key[i][0][j] = Tmp_key_column[0];
  80024e6:	700a      	strb	r2, [r1, #0]
-			ExpandedKey[i][1][j] = TempKeyCol[1];
+			Expanded_key[i][1][j] = Tmp_key_column[1];
  80024e8:	710b      	strb	r3, [r1, #4]
-			ExpandedKey[i][2][j] = TempKeyCol[2];
+			Expanded_key[i][2][j] = Tmp_key_column[2];
  80024ea:	9b02      	ldr	r3, [sp, #8]
  80024ec:	720b      	strb	r3, [r1, #8]
-			ExpandedKey[i][3][j] = TempKeyCol[3];
+			Expanded_key[i][3][j] = Tmp_key_column[3];
  80024ee:	9b03      	ldr	r3, [sp, #12]
  80024f0:	730b      	strb	r3, [r1, #12]
-			TempKeyCol[0] = TempKeyCol[0]^ExpandedKey[i-1][0][j];
+			Tmp_key_column[0] = Tmp_key_column[0]^Expanded_key[i-1][0][j];
  80024f2:	9b07      	ldr	r3, [sp, #28]
  80024f4:	4053      	eors	r3, r2
  80024f6:	9307      	str	r3, [sp, #28]
-			TempKeyCol[1] = TempKeyCol[1]^ExpandedKey[i-1][1][j];
+			Tmp_key_column[1] = Tmp_key_column[1]^Expanded_key[i-1][1][j];
  80024f8:	9a04      	ldr	r2, [sp, #16]
  80024fa:	9b01      	ldr	r3, [sp, #4]
  80024fc:	405a      	eors	r2, r3
  80024fe:	9204      	str	r2, [sp, #16]
-			TempKeyCol[2] = TempKeyCol[2]^ExpandedKey[i-1][2][j];
+			Tmp_key_column[2] = Tmp_key_column[2]^Expanded_key[i-1][2][j];
  8002500:	9b02      	ldr	r3, [sp, #8]
  8002502:	9a05      	ldr	r2, [sp, #20]
  8002504:	405a      	eors	r2, r3
  8002506:	9205      	str	r2, [sp, #20]
-			TempKeyCol[3] = TempKeyCol[3]^ExpandedKey[i-1][3][j];
+			Tmp_key_column[3] = Tmp_key_column[3]^Expanded_key[i-1][3][j];
  8002508:	9b03      	ldr	r3, [sp, #12]
  800250a:	9a06      	ldr	r2, [sp, #24]
  800250c:	405a      	eors	r2, r3
-			ExpandedKey[i][0][j] = TempKeyCol[0];
+			Expanded_key[i][0][j] = Tmp_key_column[0];
  800250e:	9b07      	ldr	r3, [sp, #28]
-			TempKeyCol[3] = TempKeyCol[3]^ExpandedKey[i-1][3][j];
+			Tmp_key_column[3] = Tmp_key_column[3]^Expanded_key[i-1][3][j];
  8002510:	9206      	str	r2, [sp, #24]
-			ExpandedKey[i][0][j] = TempKeyCol[0];
+			Expanded_key[i][0][j] = Tmp_key_column[0];
  8002512:	704b      	strb	r3, [r1, #1]
-			TempKeyCol[0] = TempKeyCol[0]^ExpandedKey[i-1][0][j];
+			Tmp_key_column[0] = Tmp_key_column[0]^Expanded_key[i-1][0][j];
  8002514:	405c      	eors	r4, r3
-			TempKeyCol[1] = TempKeyCol[1]^ExpandedKey[i-1][1][j];
+			Tmp_key_column[1] = Tmp_key_column[1]^Expanded_key[i-1][1][j];
  8002516:	4643      	mov	r3, r8
-			ExpandedKey[i][1][j] = TempKeyCol[1];
+			Expanded_key[i][1][j] = Tmp_key_column[1];
  8002518:	9a04      	ldr	r2, [sp, #16]
-			TempKeyCol[0] = TempKeyCol[0]^ExpandedKey[i-1][0][j];
+			Tmp_key_column[0] = Tmp_key_column[0]^Expanded_key[i-1][0][j];
  800251a:	4067      	eors	r7, r4
-			ExpandedKey[i][1][j] = TempKeyCol[1];
+			Expanded_key[i][1][j] = Tmp_key_column[1];
  800251c:	714a      	strb	r2, [r1, #5]
-			ExpandedKey[i][2][j] = TempKeyCol[2];
+			Expanded_key[i][2][j] = Tmp_key_column[2];
  800251e:	9a05      	ldr	r2, [sp, #20]
-			ExpandedKey[i][0][j] = TempKeyCol[0];
+			Expanded_key[i][0][j] = Tmp_key_column[0];
  8002520:	708c      	strb	r4, [r1, #2]
-			ExpandedKey[i][2][j] = TempKeyCol[2];
+			Expanded_key[i][2][j] = Tmp_key_column[2];
  8002522:	724a      	strb	r2, [r1, #9]
-			ExpandedKey[i][3][j] = TempKeyCol[3];
+			Expanded_key[i][3][j] = Tmp_key_column[3];
  8002524:	9a06      	ldr	r2, [sp, #24]
-			ExpandedKey[i][0][j] = TempKeyCol[0];
+			Expanded_key[i][0][j] = Tmp_key_column[0];
  8002526:	70cf      	strb	r7, [r1, #3]
-			ExpandedKey[i][3][j] = TempKeyCol[3];
+			Expanded_key[i][3][j] = Tmp_key_column[3];
  8002528:	734a      	strb	r2, [r1, #13]
-			TempKeyCol[1] = TempKeyCol[1]^ExpandedKey[i-1][1][j];
+			Tmp_key_column[1] = Tmp_key_column[1]^Expanded_key[i-1][1][j];
  800252a:	9a04      	ldr	r2, [sp, #16]
  800252c:	4053      	eors	r3, r2
  800252e:	4698      	mov	r8, r3
-			TempKeyCol[2] = TempKeyCol[2]^ExpandedKey[i-1][2][j];
+			Tmp_key_column[2] = Tmp_key_column[2]^Expanded_key[i-1][2][j];
  8002530:	9a05      	ldr	r2, [sp, #20]
  8002532:	9b09      	ldr	r3, [sp, #36]	@ 0x24
  8002534:	4053      	eors	r3, r2
  8002536:	9309      	str	r3, [sp, #36]	@ 0x24
-			TempKeyCol[3] = TempKeyCol[3]^ExpandedKey[i-1][3][j];
+			Tmp_key_column[3] = Tmp_key_column[3]^Expanded_key[i-1][3][j];
  8002538:	4653      	mov	r3, sl
  800253a:	9a06      	ldr	r2, [sp, #24]
  800253c:	4053      	eors	r3, r2
  800253e:	469a      	mov	sl, r3
-			ExpandedKey[i][1][j] = TempKeyCol[1];
+			Expanded_key[i][1][j] = Tmp_key_column[1];
  8002540:	4643      	mov	r3, r8
  8002542:	718b      	strb	r3, [r1, #6]
-			ExpandedKey[i][3][j] = TempKeyCol[3];
+			Expanded_key[i][3][j] = Tmp_key_column[3];
  8002544:	4653      	mov	r3, sl
  8002546:	738b      	strb	r3, [r1, #14]
-			TempKeyCol[1] = TempKeyCol[1]^ExpandedKey[i-1][1][j];
+			Tmp_key_column[1] = Tmp_key_column[1]^Expanded_key[i-1][1][j];
  8002548:	4643      	mov	r3, r8
  800254a:	4058      	eors	r0, r3
-			TempKeyCol[3] = TempKeyCol[3]^ExpandedKey[i-1][3][j];
+			Tmp_key_column[3] = Tmp_key_column[3]^Expanded_key[i-1][3][j];
  800254c:	4653      	mov	r3, sl
-			ExpandedKey[i][2][j] = TempKeyCol[2];
+			Expanded_key[i][2][j] = Tmp_key_column[2];
  800254e:	9a09      	ldr	r2, [sp, #36]	@ 0x24
-			TempKeyCol[3] = TempKeyCol[3]^ExpandedKey[i-1][3][j];
+			Tmp_key_column[3] = Tmp_key_column[3]^Expanded_key[i-1][3][j];
  8002550:	405e      	eors	r6, r3
-			ExpandedKey[i][2][j] = TempKeyCol[2];
+			Expanded_key[i][2][j] = Tmp_key_column[2];
  8002552:	728a      	strb	r2, [r1, #10]
-			TempKeyCol[2] = TempKeyCol[2]^ExpandedKey[i-1][2][j];
+			Tmp_key_column[2] = Tmp_key_column[2]^Expanded_key[i-1][2][j];
  8002554:	4055      	eors	r5, r2
 	for (i=1; i<11; i++){
  8002556:	9a08      	ldr	r2, [sp, #32]
  8002558:	4b09      	ldr	r3, [pc, #36]	@ (8002580 <ExpandKey+0x138>)
  800255a:	3201      	adds	r2, #1
-			ExpandedKey[i][1][j] = TempKeyCol[1];
+			Expanded_key[i][1][j] = Tmp_key_column[1];
  800255c:	71c8      	strb	r0, [r1, #7]
-			ExpandedKey[i][2][j] = TempKeyCol[2];
+			Expanded_key[i][2][j] = Tmp_key_column[2];
  800255e:	72cd      	strb	r5, [r1, #11]
-			ExpandedKey[i][3][j] = TempKeyCol[3];
+			Expanded_key[i][3][j] = Tmp_key_column[3];
  8002560:	73ce      	strb	r6, [r1, #15]
 	for (i=1; i<11; i++){
  8002562:	9208      	str	r2, [sp, #32]

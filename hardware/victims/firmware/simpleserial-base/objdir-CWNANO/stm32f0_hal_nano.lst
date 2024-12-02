@@ -959,30 +959,30 @@
  735              		.file 9 ".././hal/stm32f0/stm32f0xx_hal_uart.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0_hal_nano.c
-     /tmp/cc7s22qK.s:19     .text.platform_init:00000000 $t
-     /tmp/cc7s22qK.s:26     .text.platform_init:00000000 platform_init
-     /tmp/cc7s22qK.s:144    .text.init_uart:00000000 $t
-     /tmp/cc7s22qK.s:151    .text.init_uart:00000000 init_uart
-     /tmp/cc7s22qK.s:297    .text.init_uart:00000078 $d
-     /tmp/cc7s22qK.s:304    .text.trigger_setup:00000000 $t
-     /tmp/cc7s22qK.s:311    .text.trigger_setup:00000000 trigger_setup
-     /tmp/cc7s22qK.s:445    .text.trigger_setup:00000080 $d
-     /tmp/cc7s22qK.s:450    .text.trigger_high:00000000 $t
-     /tmp/cc7s22qK.s:457    .text.trigger_high:00000000 trigger_high
-     /tmp/cc7s22qK.s:486    .text.trigger_low:00000000 $t
-     /tmp/cc7s22qK.s:493    .text.trigger_low:00000000 trigger_low
-     /tmp/cc7s22qK.s:522    .text.getch:00000000 $t
-     /tmp/cc7s22qK.s:529    .text.getch:00000000 getch
-     /tmp/cc7s22qK.s:587    .text.getch:0000002c $d
-     /tmp/cc7s22qK.s:593    .text.putch:00000000 $t
-     /tmp/cc7s22qK.s:600    .text.putch:00000000 putch
-     /tmp/cc7s22qK.s:637    .text.putch:00000018 $d
-     /tmp/cc7s22qK.s:643    .text.led_error:00000000 $t
-     /tmp/cc7s22qK.s:650    .text.led_error:00000000 led_error
-     /tmp/cc7s22qK.s:681    .text.led_ok:00000000 $t
-     /tmp/cc7s22qK.s:688    .text.led_ok:00000000 led_ok
-     /tmp/cc7s22qK.s:724    .bss:00000000 UartHandle
-     /tmp/cc7s22qK.s:720    .bss:00000000 $d
+     /tmp/cc2ZfrJx.s:19     .text.platform_init:00000000 $t
+     /tmp/cc2ZfrJx.s:26     .text.platform_init:00000000 platform_init
+     /tmp/cc2ZfrJx.s:144    .text.init_uart:00000000 $t
+     /tmp/cc2ZfrJx.s:151    .text.init_uart:00000000 init_uart
+     /tmp/cc2ZfrJx.s:297    .text.init_uart:00000078 $d
+     /tmp/cc2ZfrJx.s:304    .text.trigger_setup:00000000 $t
+     /tmp/cc2ZfrJx.s:311    .text.trigger_setup:00000000 trigger_setup
+     /tmp/cc2ZfrJx.s:445    .text.trigger_setup:00000080 $d
+     /tmp/cc2ZfrJx.s:450    .text.trigger_high:00000000 $t
+     /tmp/cc2ZfrJx.s:457    .text.trigger_high:00000000 trigger_high
+     /tmp/cc2ZfrJx.s:486    .text.trigger_low:00000000 $t
+     /tmp/cc2ZfrJx.s:493    .text.trigger_low:00000000 trigger_low
+     /tmp/cc2ZfrJx.s:522    .text.getch:00000000 $t
+     /tmp/cc2ZfrJx.s:529    .text.getch:00000000 getch
+     /tmp/cc2ZfrJx.s:587    .text.getch:0000002c $d
+     /tmp/cc2ZfrJx.s:593    .text.putch:00000000 $t
+     /tmp/cc2ZfrJx.s:600    .text.putch:00000000 putch
+     /tmp/cc2ZfrJx.s:637    .text.putch:00000018 $d
+     /tmp/cc2ZfrJx.s:643    .text.led_error:00000000 $t
+     /tmp/cc2ZfrJx.s:650    .text.led_error:00000000 led_error
+     /tmp/cc2ZfrJx.s:681    .text.led_ok:00000000 $t
+     /tmp/cc2ZfrJx.s:688    .text.led_ok:00000000 led_ok
+     /tmp/cc2ZfrJx.s:724    .bss:00000000 UartHandle
+     /tmp/cc2ZfrJx.s:720    .bss:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_Init

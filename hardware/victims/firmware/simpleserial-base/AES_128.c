@@ -65,44 +65,44 @@ const unsigned char RCon[10] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 
 /**********************************************************************
  * Functions for key expansion
  *********************************************************************/
-void ExpandKey (unsigned char Key[][4], unsigned char ExpandedKey[][4][4])
+void ExpandKey (unsigned char Key[][4], unsigned char Expanded_key[][4][4])
 {
 	unsigned char TempKey[4][4];
 	bzero(TempKey, 4*4*sizeof (unsigned char));
-	unsigned char TempKeyCol[4];
-	bzero(TempKeyCol, 4*sizeof (unsigned char));
+	unsigned char Tmp_key_column[4];
+	bzero(Tmp_key_column, 4*sizeof (unsigned char));
 	int i,j;
 
 	// Encryption Key copied to Expanded Key [0]
-	memcpy(ExpandedKey[0], Key, 4 * 4 * sizeof(unsigned char));
+	memcpy(Expanded_key[0], Key, 4 * 4 * sizeof(unsigned char));
 
 	for (i=1; i<11; i++){
 		// W3 copied to TempKeyRow with rotation
-		TempKeyCol[0]=ExpandedKey[i-1][1][3];
-		TempKeyCol[1]=ExpandedKey[i-1][2][3];
-		TempKeyCol[2]=ExpandedKey[i-1][3][3];
-		TempKeyCol[3]=ExpandedKey[i-1][0][3];
+		Tmp_key_column[0]=Expanded_key[i-1][1][3];
+		Tmp_key_column[1]=Expanded_key[i-1][2][3];
+		Tmp_key_column[2]=Expanded_key[i-1][3][3];
+		Tmp_key_column[3]=Expanded_key[i-1][0][3];
 
 		// sBox applied
-		TempKeyCol[0]=SBox[ TempKeyCol[0] ];
-		TempKeyCol[1]=SBox[ TempKeyCol[1] ];
-		TempKeyCol[2]=SBox[ TempKeyCol[2] ];
-		TempKeyCol[3]=SBox[ TempKeyCol[3] ];
+		Tmp_key_column[0]=SBox[ Tmp_key_column[0] ];
+		Tmp_key_column[1]=SBox[ Tmp_key_column[1] ];
+		Tmp_key_column[2]=SBox[ Tmp_key_column[2] ];
+		Tmp_key_column[3]=SBox[ Tmp_key_column[3] ];
 
 		// Rcon applied
-		TempKeyCol[0]^=RCon[i-1];
+		Tmp_key_column[0]^=RCon[i-1];
 
 		// XOR
 		for(j=0; j<4; j++){
-			TempKeyCol[0] = TempKeyCol[0]^ExpandedKey[i-1][0][j];
-			TempKeyCol[1] = TempKeyCol[1]^ExpandedKey[i-1][1][j];
-			TempKeyCol[2] = TempKeyCol[2]^ExpandedKey[i-1][2][j];
-			TempKeyCol[3] = TempKeyCol[3]^ExpandedKey[i-1][3][j];
+			Tmp_key_column[0] = Tmp_key_column[0]^Expanded_key[i-1][0][j];
+			Tmp_key_column[1] = Tmp_key_column[1]^Expanded_key[i-1][1][j];
+			Tmp_key_column[2] = Tmp_key_column[2]^Expanded_key[i-1][2][j];
+			Tmp_key_column[3] = Tmp_key_column[3]^Expanded_key[i-1][3][j];
 
-			ExpandedKey[i][0][j] = TempKeyCol[0];
-			ExpandedKey[i][1][j] = TempKeyCol[1];
-			ExpandedKey[i][2][j] = TempKeyCol[2];
-			ExpandedKey[i][3][j] = TempKeyCol[3];
+			Expanded_key[i][0][j] = Tmp_key_column[0];
+			Expanded_key[i][1][j] = Tmp_key_column[1];
+			Expanded_key[i][2][j] = Tmp_key_column[2];
+			Expanded_key[i][3][j] = Tmp_key_column[3];
 		}
 	}
 }
