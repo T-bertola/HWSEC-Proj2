@@ -22,13 +22,19 @@
 #include "AES_128.h"
 #include <time.h>
 
+//AES current state matrix
 unsigned char StateArray [4][4];
+//Expanded Key matrix
 unsigned char ExpandedKey[11][4][4];
+//Masked state array matrix
 unsigned char ST_Matrix [4][4];
+//Mask Matrix
 unsigned char Mask_Matrix[4][4];
+//State array
 unsigned char S_Matrix[4][4];
-
+//Flag for if the key was sent to the board
 unsigned char key_entered = 0;
+
 unsigned char Key[4][4]= {  {0x00, 0x00, 0x00, 0x00},
 		{0x00, 0x00, 0x00, 0x00},
 		{0x00, 0x00, 0x00, 0x00},
@@ -44,6 +50,7 @@ void AESRound(unsigned int StateArray[4],unsigned int Key [4] );
 void encrypt();
 uint8_t get_key(uint8_t* k, uint8_t len)
 {
+	//Set the internal key
 	memcpy(Key, k, 16);
 	return 0x00;
 }
@@ -56,12 +63,14 @@ void encrypt(){
 			Mask_Matrix[i][j] = rand() % 256;
 		}
 	}
-
+	//Mask the plaintext 
 	AddMatrices(Mask_Matrix, PlainText, ST_Matrix);
 
 	ExpandKey(Key, ExpandedKey);
+	//Set the state array
 	memcpy(StateArray, PlainText, 4 * 4 * sizeof(unsigned char));
 
+	//Add the round key 
 	AddRoundKey(ExpandedKey[0], StateArray);
 
 	AddRoundKey(ExpandedKey[0], ST_Matrix);
@@ -75,17 +84,18 @@ void encrypt(){
 		SubBytes(StateArray);
 		//Remask Output
 		AddMatrices(S_Matrix, Mask_Matrix, ST_Matrix);
-
+		//ShiftRows 
 		ShiftRows(StateArray);
 		ShiftRows(ST_Matrix);
 		ShiftRows(Mask_Matrix);
 
 		if(i!=10){
+			//Mix Columns 9 times 
 			MixColumns(StateArray);
 			MixColumns(ST_Matrix);
 			MixColumns(Mask_Matrix);
 		}
-
+		//Add the round key
 		AddRoundKey(ExpandedKey[i], StateArray);
 		AddRoundKey(ExpandedKey[i], ST_Matrix);
 	}
