@@ -1,0 +1,122 @@
+   1              		.cpu cortex-m0
+   2              		.arch armv6s-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.file	"aes-independant.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 ".././crypto/aes-independant.c"
+  18              		.section	.text.aes_indep_key,"ax",%progbits
+  19              		.align	1
+  20              		.global	aes_indep_key
+  21              		.syntax unified
+  22              		.code	16
+  23              		.thumb_func
+  25              	aes_indep_key:
+  26              	.LVL0:
+  27              	.LFB0:
+   1:.././crypto/aes-independant.c **** /*
+   2:.././crypto/aes-independant.c ****     This file is part of the AESExplorer Example Targets
+   3:.././crypto/aes-independant.c ****     Copyright (C) 2012 Colin O'Flynn <coflynn@newae.com>
+   4:.././crypto/aes-independant.c **** 
+   5:.././crypto/aes-independant.c ****     This program is free software: you can redistribute it and/or modify
+   6:.././crypto/aes-independant.c ****     it under the terms of the GNU General Public License as published by
+   7:.././crypto/aes-independant.c ****     the Free Software Foundation, either version 3 of the License, or
+   8:.././crypto/aes-independant.c ****     (at your option) any later version.
+   9:.././crypto/aes-independant.c **** 
+  10:.././crypto/aes-independant.c ****     This program is distributed in the hope that it will be useful,
+  11:.././crypto/aes-independant.c ****     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  12:.././crypto/aes-independant.c ****     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  13:.././crypto/aes-independant.c ****     GNU General Public License for more details.
+  14:.././crypto/aes-independant.c **** 
+  15:.././crypto/aes-independant.c ****     You should have received a copy of the GNU General Public License
+  16:.././crypto/aes-independant.c ****     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  17:.././crypto/aes-independant.c **** */
+  18:.././crypto/aes-independant.c **** 
+  19:.././crypto/aes-independant.c **** #include "aes-independant.h"
+  20:.././crypto/aes-independant.c **** #include "hal.h"
+  21:.././crypto/aes-independant.c **** 
+  22:.././crypto/aes-independant.c **** 
+  23:.././crypto/aes-independant.c **** uint8_t enckey[16];
+  24:.././crypto/aes-independant.c **** 
+  25:.././crypto/aes-independant.c **** 
+  26:.././crypto/aes-independant.c **** void aes_indep_key(uint8_t * key)
+  27:.././crypto/aes-independant.c **** {
+  28              		.loc 1 27 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  28:.././crypto/aes-independant.c **** 	for(uint8_t i=0; i < 16; i++){
+  33              		.loc 1 28 2 view .LVU1
+  34              	.LBB2:
+  35              		.loc 1 28 6 view .LVU2
+  36              		.loc 1 28 21 discriminator 1 view .LVU3
+  37              	.LBE2:
+  27:.././crypto/aes-independant.c **** 	for(uint8_t i=0; i < 16; i++){
+  38              		.loc 1 27 1 is_stmt 0 view .LVU4
+  39 0000 0023     		movs	r3, #0
+  40              	.LBB3:
+  29:.././crypto/aes-independant.c **** 		enckey[i] = key[i];
+  41              		.loc 1 29 13 view .LVU5
+  42 0002 034A     		ldr	r2, .L4
+  43              	.LVL1:
+  44              	.L2:
+  45              		.loc 1 29 3 is_stmt 1 view .LVU6
+  46              		.loc 1 29 18 is_stmt 0 view .LVU7
+  47 0004 C15C     		ldrb	r1, [r0, r3]
+  48              		.loc 1 29 13 view .LVU8
+  49 0006 9954     		strb	r1, [r3, r2]
+  28:.././crypto/aes-independant.c **** 	for(uint8_t i=0; i < 16; i++){
+  50              		.loc 1 28 28 is_stmt 1 discriminator 3 view .LVU9
+  51              	.LVL2:
+  28:.././crypto/aes-independant.c **** 	for(uint8_t i=0; i < 16; i++){
+  52              		.loc 1 28 21 discriminator 1 view .LVU10
+  53 0008 0133     		adds	r3, r3, #1
+  54              	.LVL3:
+  28:.././crypto/aes-independant.c **** 	for(uint8_t i=0; i < 16; i++){
+  55              		.loc 1 28 21 is_stmt 0 discriminator 1 view .LVU11
+  56 000a 102B     		cmp	r3, #16
+  57 000c FAD1     		bne	.L2
+  58              	.LBE3:
+  30:.././crypto/aes-independant.c **** 	}
+  31:.././crypto/aes-independant.c **** }
+  59              		.loc 1 31 1 view .LVU12
+  60              		@ sp needed
+  61 000e 7047     		bx	lr
+  62              	.L5:
+  63              		.align	2
+  64              	.L4:
+  65 0010 00000000 		.word	.LANCHOR0
+  66              		.cfi_endproc
+  67              	.LFE0:
+  69              		.global	enckey
+  70              		.bss
+  71              		.set	.LANCHOR0,. + 0
+  74              	enckey:
+  75 0000 00000000 		.space	16
+  75      00000000 
+  75      00000000 
+  75      00000000 
+  76              		.text
+  77              	.Letext0:
+  78              		.file 2 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h"
+  79              		.file 3 ".././crypto/aes-independant.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 aes-independant.c
+     /tmp/ccDxBqAR.s:19     .text.aes_indep_key:00000000 $t
+     /tmp/ccDxBqAR.s:25     .text.aes_indep_key:00000000 aes_indep_key
+     /tmp/ccDxBqAR.s:65     .text.aes_indep_key:00000010 $d
+     /tmp/ccDxBqAR.s:74     .bss:00000000 enckey
+     /tmp/ccDxBqAR.s:75     .bss:00000000 $d
+
+NO UNDEFINED SYMBOLS
